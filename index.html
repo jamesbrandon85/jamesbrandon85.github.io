@@ -142,6 +142,10 @@
   .workshops-video { width: 100%; aspect-ratio: 16 / 9; }
   .workshops-video iframe { width: 100%; height: 100%; border: none; }
 
+
+  /* Fade-up scroll animation */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -154,6 +158,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#workshops">Workshops</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -170,7 +175,7 @@
   <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
 </section>
 
-<section class="about" id="about">
+<section class="about fade-up" id="about">
   <div class="about-inner">
     <div class="about-image-wrap">
       <img src="profile.jpg" alt="James Brandon">
@@ -192,7 +197,7 @@
   </div>
 </section>
 
-<section class="gallery" id="gallery">
+<section class="gallery fade-up" id="gallery">
   <div class="gallery-header">
     <p class="section-label">Portfolio</p>
     <h2 class="section-title">Selected <em>Work</em></h2>
@@ -202,7 +207,7 @@
   <button id="loadMoreBtn">Load More</button>
 </section>
 
-<section class="workshops" id="workshops">
+<section class="workshops fade-up" id="workshops">
   <div class="workshops-inner">
     <p class="section-label">Learn With Me</p>
     <h2 class="section-title">Photo <em>Adventures &amp; Workshops</em></h2>
@@ -214,7 +219,7 @@
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact fade-up" id="contact">ontact">
   <div class="contact-inner">
     <p class="section-label">Get In Touch</p>
     <h2 class="section-title">Let's <em>Work Together</em></h2>
@@ -409,6 +414,22 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+</script>
+
+<script>
+  (function() {
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
 </script>
 </body>
 </html>
