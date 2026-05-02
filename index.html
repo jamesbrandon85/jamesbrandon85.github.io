@@ -34,9 +34,9 @@
   .hero-cta { display: inline-flex; align-items: center; gap: 12px; background: var(--accent); color: var(--dark); text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 16px 30px; transition: background 0.2s, transform 0.2s; }
   .hero-cta:hover { background: #d4b57a; transform: translateY(-1px); }
   .hero-cta svg { width: 14px; height: 14px; }
-  .scroll-hint { position: absolute; bottom: 32px; right: 64px; z-index: 11; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.45); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; }
-  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.4)); animation: scrollAnim 2s ease-in-out infinite; }
-  @keyframes scrollAnim { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+  
+  
+   50% { opacity: 1; } }
 
   section { padding: 100px 64px; }
   .section-label { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
@@ -174,7 +174,7 @@
     <p class="hero-sub">Fine art travel and landscape photography by <span style="white-space:nowrap">James Brandon.</span> Based in Fort Worth, Texas.</p>
     <a href="#gallery" id="heroCta" class="hero-cta">View Gallery <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
-  <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
+  
 </section>
 
 <section class="about fade-up" id="about">
@@ -287,7 +287,7 @@
   }
 
   // Set initial image
-  setSlide(slideIdx, heroBg); setTimeout(sampleHeroColor, 500);
+  setSlide(slideIdx, heroBg); applyButtonColor(BASE_URL + allPhotos[slideIdx].src + HERO_Q);
   heroBg.classList.add('loaded');
 
   // Build progress bar
@@ -321,8 +321,8 @@
   function advanceSlide() {
     slideIdx = (slideIdx + 1) % allPhotos.length;
     var nextSrc = BASE_URL + allPhotos[slideIdx].src + HERO_Q;
-    preloadImg(nextSrc).then(function() {
-      // Load next image into bg2 layer, bring it on top
+    preloadImg(nextSrc).then(function() { extractColor(nextSrc, function(){}); // pre-cache color
+            // Load next image into bg2 layer, bring it on top
       heroBg2.style.backgroundImage = "url('" + nextSrc + "')";
       heroBg2.style.zIndex = '2';
       heroBg.style.zIndex = '1';
@@ -336,7 +336,7 @@
       }, 1600);
       updateCaption();
       startProgress();
-      sampleHeroColor();
+      applyButtonColor(nextSrc);
     });
   }
 
@@ -437,19 +437,16 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 
-  // Canvas-based color sampling for hero button
-  function sampleHeroColor() {
-    var cta = document.getElementById('heroCta');
-    if (!cta) return;
-    var bg = document.querySelector('.hero-bg');
-    var imgUrl = bg ? bg.style.backgroundImage.replace(/url\(["']?|["']?\)$/g, '') : '';
-    if (!imgUrl) return;
+  // Color cache: pre-sample image colors for instant button updates
+  var colorCache = {};
+
+  function extractColor(imgSrc, callback) {
+    if (colorCache[imgSrc]) { callback(colorCache[imgSrc]); return; }
     var img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = function() {
       var canvas = document.createElement('canvas');
-      canvas.width = 32;
-      canvas.height = 32;
+      canvas.width = 32; canvas.height = 32;
       var ctx = canvas.getContext('2d');
       ctx.drawImage(img, 0, 0, 32, 32);
       var data = ctx.getImageData(0, 0, 32, 32).data;
@@ -458,25 +455,35 @@ navLinks.querySelectorAll('a').forEach(link => {
         for (var sx = 0; sx < 32; sx += 5) {
           var i4 = (sy * 32 + sx) * 4;
           var r = data[i4], g = data[i4+1], b = data[i4+2];
-          var max = Math.max(r,g,b), min = Math.min(r,g,b);
-          var brightness = (max + min) / 2;
-          var sat = max === min ? 0 : (brightness < 128 ? (max-min)/(max+min) : (max-min)/(510-max-min));
+          var mx = Math.max(r,g,b), mn = Math.min(r,g,b);
+          var brightness = (mx + mn) / 2;
+          var sat = mx === mn ? 0 : (brightness < 128 ? (mx-mn)/(mx+mn) : (mx-mn)/(510-mx-mn));
           var score = sat * 1.5 + (1 - Math.abs(brightness - 140) / 140);
           if (score > bestScore) { bestScore = score; best = {r:r,g:g,b:b}; }
         }
       }
       if (best) {
-        var hexColor = '#' + [best.r, best.g, best.b].map(function(v) {
-          return ('0' + Math.round(v).toString(16)).slice(-2);
-        }).join('');
-        cta.style.background = hexColor;
-        var lum = 0.299 * best.r + 0.587 * best.g + 0.114 * best.b;
-        cta.style.color = lum > 160 ? '#0d0d0d' : '#ffffff';
-        cta.style.transition = 'background 1.2s ease, color 0.6s ease';
+        var rh = ('0' + Math.round(best.r).toString(16)).slice(-2);
+        var gh = ('0' + Math.round(best.g).toString(16)).slice(-2);
+        var bh = ('0' + Math.round(best.b).toString(16)).slice(-2);
+        var hex = '#' + rh + gh + bh;
+        var result = { hex: hex, lum: 0.299*best.r + 0.587*best.g + 0.114*best.b };
+        colorCache[imgSrc] = result;
+        callback(result);
       }
     };
     img.onerror = function() {};
-    img.src = imgUrl;
+    img.src = imgSrc;
+  }
+
+  function applyButtonColor(imgSrc) {
+    var cta = document.getElementById('heroCta');
+    if (!cta) return;
+    extractColor(imgSrc, function(result) {
+      cta.style.background = result.hex;
+      cta.style.color = result.lum > 160 ? '#0d0d0d' : '#ffffff';
+      cta.style.transition = 'background 0.8s ease, color 0.4s ease';
+    });
   }
 
 </script>
