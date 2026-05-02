@@ -19,8 +19,13 @@
   .nav-links a:hover { color: var(--accent); }
 
   .hero { position: relative; height: 100vh; min-height: 600px; overflow: hidden; display: flex; align-items: flex-end; padding-bottom: 80px; }
-  .hero-bg { position: absolute; inset: 0; background: url('https://i0.wp.com/jamesb.com/wp-content/uploads/2024/04/banff-rundle-sunrise-james-brandon-copy-1.jpg?fit=2000%2C1334&ssl=1') center top / cover no-repeat; transform: scale(1.04); transition: transform 8s ease-out; }
-  .hero-bg.loaded { transform: scale(1); }
+    .hero-bg, .hero-bg2 { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.5s ease-in-out; }
+  .hero-bg { z-index: 1; opacity: 1; }
+  .hero-bg2 { z-index: 0; opacity: 0; }
+  #heroProgress { position: absolute; bottom: 0; left: 0; height: 3px; background: rgba(255,255,255,0.75); width: 0; z-index: 10; pointer-events: none; }
+  #heroCaption { position: absolute; bottom: 28px; right: 32px; color: rgba(255,255,255,0.72); font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; z-index: 10; text-align: right; font-family: inherit; text-shadow: 0 1px 4px rgba(0,0,0,0.6); pointer-events: none; line-height: 1.6; }
+  #heroCaption strong { font-size: 12px; font-weight: 600; display: block; }
+
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.85) 100%); }
   .hero-content { position: relative; z-index: 2; padding: 0 max(20px, 5vw); max-width: 800px; }
   .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 80px); font-weight: 700; line-height: 1.08; color: var(--white); margin-bottom: 22px; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
@@ -87,14 +92,14 @@
   #lbPrev { left: 16px; }
   #lbNext { right: 16px; }
 
-  /* ─── HAMBURGER MENU ─── */
+  /* âââ HAMBURGER MENU âââ */
   .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 200; }
   .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* ─── MOBILE STYLES ─── */
+  /* âââ MOBILE STYLES âââ */
   @media (max-width: 768px) {
     section { padding: 60px 24px; }
     .hero { padding: 0 !important; }
@@ -145,6 +150,7 @@
 
 <section class="hero">
   <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-bg2" id="heroBg2"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="hero-title">Chasing Light<br>Around the <em>World</em></h1>
@@ -163,9 +169,9 @@
       <p class="section-label">About Me</p>
       <h2 class="section-title">James Brandon<br><em>Photography</em></h2>
       <div class="section-divider"></div>
-      <p>I'm James Brandon — a travel and landscape photographer based in Fort Worth, Texas. What started as a passion in 2008 became a decade-long full-time career chasing extraordinary light across the US and beyond.</p>
+      <p>I'm James Brandon â a travel and landscape photographer based in Fort Worth, Texas. What started as a passion in 2008 became a decade-long full-time career chasing extraordinary light across the US and beyond.</p>
       <p>I led workshops across the country, shot for brands like Sony, Google, Topaz Labs, on1, and Digital Photography School, and built a body of work spanning Hawaiian volcanoes, Great Plains supercells, the Canadian Rockies, coastlines from California to Maine, Europe, and more.</p>
-      <p>These days I work a full-time job and shoot on the side — but photography never really leaves you. I'm always open to brand collaborations, private workshops, or whatever you have in mind.</p>
+      <p>These days I work a full-time job and shoot on the side â but photography never really leaves you. I'm always open to brand collaborations, private workshops, or whatever you have in mind.</p>
       <div class="about-stats">
         <div><span class="stat-num">18+</span><span class="stat-label">Years Experience</span></div>
         <div><span class="stat-num">100+</span><span class="stat-label">Destinations</span></div>
@@ -190,7 +196,7 @@
     <p class="section-label">Get In Touch</p>
     <h2 class="section-title">Let's <em>Work Together</em></h2>
     <div class="section-divider" style="margin: 0 auto 32px;"></div>
-    <p>Open to brand collaborations, content creation, and private photography workshops. Whether you have a project in mind or just want to say hello — I'd love to hear from you.</p>
+    <p>Open to brand collaborations, content creation, and private photography workshops. Whether you have a project in mind or just want to say hello â I'd love to hear from you.</p>
     <button class="contact-btn" id="contactBtn">Send a Message</button>
   </div>
 </section>
@@ -216,7 +222,7 @@
 </div>
 
 <script>
-  const allPhotos = [{"src":"queens-bath-kauai-james-brandon-copy.jpg","title":"Queen's Bath Sunset","loc":"Kauai, Hawaii"},{"src":"Puu-O-o-lava-james-brandon-copy.jpg","title":"Descending Into Puʻu ʻOʻō","loc":"Hawaii Volcanoes"},{"src":"publicmarket.jpg","title":"Pike Place Market","loc":"Seattle, Washington"},{"src":"racetrack-playa-workshop.jpg","title":"Sailing Rock","loc":"Death Valley, California"},{"src":"peles-well-wawaloli-james-brandon-copy.jpg","title":"Pele's Well","loc":"Wawaloli Beach, Hawaii"},{"src":"paso-robles-tree-james-brandon-copy.jpg","title":"Solitary","loc":"Paso Robles, California"},{"src":"ninnekah-supercell-james-brandon-copy-1.jpg","title":"Approaching Storm","loc":"Ninnekah, Oklahoma"},{"src":"mt-lemmon-downpour-james-brandon-copy.jpg","title":"Downpour","loc":"Mt. Lemmon, Arizona"},{"src":"morro-sunset-tight-james-brandon.jpg","title":"Morro Rock Sunset","loc":"Morro Bay, California"},{"src":"mono-lake-tufas-sunrise-james-brandon-copy.jpg","title":"Mono Lake Tufas at Sunrise","loc":"Mono Lake, California"},{"src":"mesquite-photographers-james-brandon.jpg","title":"Sunrise at Mesquite Dunes","loc":"Death Valley, California"},{"src":"mesa-arch-sunrise-james-brandon.jpg","title":"Mesa Arch Sunrise","loc":"Canyonlands NP, Utah"},{"src":"maine-portland-light-sunset-james-brandon-copy.jpg","title":"Portland Head Light Sunset","loc":"Portland, Maine"},{"src":"laupahoehoe-wave-sunrise-james-brandon-copy.jpg","title":"Wave at Sunrise","loc":"Laupahoehoe, Hawaii"},{"src":"latourell-falls-1-james-brandon-copy.jpg","title":"Latourell Falls","loc":"Columbia River Gorge, Oregon"},{"src":"kohala-waterfalls-james-brandon-copy-1.jpg","title":"Kohala Waterfalls","loc":"Big Island, Hawaii"},{"src":"kilauea-night-sky-james-brandon-copy.jpg","title":"Kilauea’s Glow","loc":"Volcanoes NP, Hawaii"},{"src":"kee-reach-james-brandon-copy.jpg","title":"Ke’e Reach","loc":"Kauai, Hawaii"},{"src":"kauai-napali-lava-tube-james-brandon.jpg","title":"Na Pali Coast Lava Tube","loc":"Kauai, Hawaii"},{"src":"kauai-napali-coast-rainbow-james-brandon-copy.jpg","title":"Nā Pali Coast Rainbow","loc":"Kauai, Hawaii"},{"src":"james-brandon-Halemaumau-Crater-copy.jpg","title":"Halemaumau Crater","loc":"Hawaii Volcanoes NP"},{"src":"inside-athabasca-james-brandon-copy.jpg","title":"Inside Athabasca Glacier","loc":"Jasper NP, Canada"},{"src":"henrietta-supercell-1-Panorama.jpg","title":"Supercell Near Henrietta","loc":"Henrietta, Texas"},{"src":"hawaii-61g-ocean-entry-james-brandon-copy.jpg","title":"Ocean Entry","loc":"Kalapana, Hawaii"},{"src":"great-sand-dunes-waves.jpg","title":"Great Sand Dunes","loc":"Colorado"},{"src":"great-sand-dunes-sunset-new-james-brandon-copy.jpg","title":"Great Sand Dunes Sunset","loc":"Colorado"},{"src":"grazing-elk-james-brandon.jpg","title":"Bull Elk Grazing","loc":"Rocky Mountain NP, Colorado"},{"src":"grand-canyon-last-light-james-brandon-copy.jpg","title":"Last Light","loc":"Grand Canyon NP"},{"src":"gorton-creek-pano-james-brandon-copy.jpg","title":"Gorton Creek Panorama","loc":"Columbia River Gorge"},{"src":"glacier-point-milky-way-james-brandon-copy-1.jpg","title":"Milky Way at Glacier Point","loc":"Yosemite NP, California"},{"src":"disney-paris-fireworks-copy.jpg","title":"Disneyland Paris Fireworks","loc":"Paris, France"},{"src":"delicate-arch-burst-james-brandon-copy.jpg","title":"Delicate Arch","loc":"Arches NP, Utah"},{"src":"cottonball-basin-pano-james-brandon.jpg","title":"Cottonball Basin Sunset","loc":"Death Valley NP"},{"src":"colorado-aspens-james-brandon.jpg","title":"Colorado Aspens","loc":"Rocky Mountain NP"},{"src":"calif-templeton-milky-way-james-brandon-copy-1.jpg","title":"Milky Way Over Wine Country","loc":"Templeton, California"},{"src":"burg-stahleck-germany-james-brandon-copy.jpg","title":"Burg Stahleck","loc":"Rhine River, Germany"},{"src":"bixby-bridge-james-brandon-copy.jpg","title":"Bixby Bridge","loc":"Big Sur, California"},{"src":"banff-rundle-sunrise-james-brandon-copy-1.jpg","title":"Mt. Rundle Sunrise","loc":"Banff, Canada"},{"src":"banff-bull-elk-battle-james-brandon-copy.jpg","title":"Battle","loc":"Banff NP, Canada"},{"src":"DSC01970-copy.jpg","title":"Storm Chasing","loc":""},{"src":"DSC00204-copy.jpg","title":"Landscape","loc":""}];
+  const allPhotos = [{"src":"queens-bath-kauai-james-brandon-copy.jpg","title":"Queen's Bath Sunset","loc":"Kauai, Hawaii"},{"src":"Puu-O-o-lava-james-brandon-copy.jpg","title":"Descending Into PuÊ»u Ê»OÊ»oÌ","loc":"Hawaii Volcanoes"},{"src":"publicmarket.jpg","title":"Pike Place Market","loc":"Seattle, Washington"},{"src":"racetrack-playa-workshop.jpg","title":"Sailing Rock","loc":"Death Valley, California"},{"src":"peles-well-wawaloli-james-brandon-copy.jpg","title":"Pele's Well","loc":"Wawaloli Beach, Hawaii"},{"src":"paso-robles-tree-james-brandon-copy.jpg","title":"Solitary","loc":"Paso Robles, California"},{"src":"ninnekah-supercell-james-brandon-copy-1.jpg","title":"Approaching Storm","loc":"Ninnekah, Oklahoma"},{"src":"mt-lemmon-downpour-james-brandon-copy.jpg","title":"Downpour","loc":"Mt. Lemmon, Arizona"},{"src":"morro-sunset-tight-james-brandon.jpg","title":"Morro Rock Sunset","loc":"Morro Bay, California"},{"src":"mono-lake-tufas-sunrise-james-brandon-copy.jpg","title":"Mono Lake Tufas at Sunrise","loc":"Mono Lake, California"},{"src":"mesquite-photographers-james-brandon.jpg","title":"Sunrise at Mesquite Dunes","loc":"Death Valley, California"},{"src":"mesa-arch-sunrise-james-brandon.jpg","title":"Mesa Arch Sunrise","loc":"Canyonlands NP, Utah"},{"src":"maine-portland-light-sunset-james-brandon-copy.jpg","title":"Portland Head Light Sunset","loc":"Portland, Maine"},{"src":"laupahoehoe-wave-sunrise-james-brandon-copy.jpg","title":"Wave at Sunrise","loc":"Laupahoehoe, Hawaii"},{"src":"latourell-falls-1-james-brandon-copy.jpg","title":"Latourell Falls","loc":"Columbia River Gorge, Oregon"},{"src":"kohala-waterfalls-james-brandon-copy-1.jpg","title":"Kohala Waterfalls","loc":"Big Island, Hawaii"},{"src":"kilauea-night-sky-james-brandon-copy.jpg","title":"Kilaueaâs Glow","loc":"Volcanoes NP, Hawaii"},{"src":"kee-reach-james-brandon-copy.jpg","title":"Keâe Reach","loc":"Kauai, Hawaii"},{"src":"kauai-napali-lava-tube-james-brandon.jpg","title":"Na Pali Coast Lava Tube","loc":"Kauai, Hawaii"},{"src":"kauai-napali-coast-rainbow-james-brandon-copy.jpg","title":"NÄ Pali Coast Rainbow","loc":"Kauai, Hawaii"},{"src":"james-brandon-Halemaumau-Crater-copy.jpg","title":"Halemaumau Crater","loc":"Hawaii Volcanoes NP"},{"src":"inside-athabasca-james-brandon-copy.jpg","title":"Inside Athabasca Glacier","loc":"Jasper NP, Canada"},{"src":"henrietta-supercell-1-Panorama.jpg","title":"Supercell Near Henrietta","loc":"Henrietta, Texas"},{"src":"hawaii-61g-ocean-entry-james-brandon-copy.jpg","title":"Ocean Entry","loc":"Kalapana, Hawaii"},{"src":"great-sand-dunes-waves.jpg","title":"Great Sand Dunes","loc":"Colorado"},{"src":"great-sand-dunes-sunset-new-james-brandon-copy.jpg","title":"Great Sand Dunes Sunset","loc":"Colorado"},{"src":"grazing-elk-james-brandon.jpg","title":"Bull Elk Grazing","loc":"Rocky Mountain NP, Colorado"},{"src":"grand-canyon-last-light-james-brandon-copy.jpg","title":"Last Light","loc":"Grand Canyon NP"},{"src":"gorton-creek-pano-james-brandon-copy.jpg","title":"Gorton Creek Panorama","loc":"Columbia River Gorge"},{"src":"glacier-point-milky-way-james-brandon-copy-1.jpg","title":"Milky Way at Glacier Point","loc":"Yosemite NP, California"},{"src":"disney-paris-fireworks-copy.jpg","title":"Disneyland Paris Fireworks","loc":"Paris, France"},{"src":"delicate-arch-burst-james-brandon-copy.jpg","title":"Delicate Arch","loc":"Arches NP, Utah"},{"src":"cottonball-basin-pano-james-brandon.jpg","title":"Cottonball Basin Sunset","loc":"Death Valley NP"},{"src":"colorado-aspens-james-brandon.jpg","title":"Colorado Aspens","loc":"Rocky Mountain NP"},{"src":"calif-templeton-milky-way-james-brandon-copy-1.jpg","title":"Milky Way Over Wine Country","loc":"Templeton, California"},{"src":"burg-stahleck-germany-james-brandon-copy.jpg","title":"Burg Stahleck","loc":"Rhine River, Germany"},{"src":"bixby-bridge-james-brandon-copy.jpg","title":"Bixby Bridge","loc":"Big Sur, California"},{"src":"banff-rundle-sunrise-james-brandon-copy-1.jpg","title":"Mt. Rundle Sunrise","loc":"Banff, Canada"},{"src":"banff-bull-elk-battle-james-brandon-copy.jpg","title":"Battle","loc":"Banff NP, Canada"},{"src":"DSC01970-copy.jpg","title":"Storm Chasing","loc":""},{"src":"DSC00204-copy.jpg","title":"Landscape","loc":""}];
   const BASE = 'https://i0.wp.com/jamesb.com/wp-content/uploads/2024/04/';
   const THUMB = '?fit=800%2C534&ssl=1';
   const FULL = '?fit=1600%2C1067&ssl=1';
@@ -228,12 +234,82 @@
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
 
-  // Hero bg
+  // Hero slideshow
   const heroBg = document.getElementById('heroBg');
-  const heroImgEl = new Image();
-  heroImgEl.onload = () => heroBg.classList.add('loaded');
-  heroImgEl.src = 'https://i0.wp.com/jamesb.com/wp-content/uploads/2024/04/banff-rundle-sunrise-james-brandon-copy-1.jpg?fit=2000%2C1334&ssl=1';
-  heroBg.style.backgroundImage = "url('" + heroImgEl.src + "')";
+  const heroBg2 = document.getElementById('heroBg2');
+  const BASE_URL = 'https://i0.wp.com/jamesb.com/wp-content/uploads/2024/04/';
+  const HERO_Q = '?fit=2000%2C1334&ssl=1';
+  const SLIDE_INTERVAL = 5000;
+  let slideIdx = 0;
+
+  function preloadImg(src) {
+    return new Promise(function(resolve) {
+      var img = new Image();
+      img.onload = resolve;
+      img.onerror = resolve;
+      img.src = src;
+    });
+  }
+
+  function setSlide(idx, layer) {
+    var src = BASE_URL + allPhotos[idx].src + HERO_Q;
+    layer.style.backgroundImage = "url('" + src + "')";
+  }
+
+  // Set initial image
+  setSlide(slideIdx, heroBg);
+  heroBg.classList.add('loaded');
+
+  // Build progress bar
+  var progressBar = document.createElement('div');
+  progressBar.id = 'heroProgress';
+  document.querySelector('.hero').appendChild(progressBar);
+
+  // Build caption
+  var caption = document.createElement('div');
+  caption.id = 'heroCaption';
+  document.querySelector('.hero').appendChild(caption);
+
+  function updateCaption() {
+    var p = allPhotos[slideIdx];
+    caption.innerHTML = '<strong>' + p.title + '</strong>' + (p.loc ? p.loc : '');
+  }
+  updateCaption();
+
+  function startProgress() {
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0';
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        progressBar.style.transition = 'width ' + SLIDE_INTERVAL + 'ms linear';
+        progressBar.style.width = '100%';
+      });
+    });
+  }
+  startProgress();
+
+  function advanceSlide() {
+    slideIdx = (slideIdx + 1) % allPhotos.length;
+    var nextSrc = BASE_URL + allPhotos[slideIdx].src + HERO_Q;
+    preloadImg(nextSrc).then(function() {
+      // Load next image into bg2 layer, bring it on top
+      heroBg2.style.backgroundImage = "url('" + nextSrc + "')";
+      heroBg2.style.zIndex = '2';
+      heroBg.style.zIndex = '1';
+      heroBg2.style.opacity = '1';
+      setTimeout(function() {
+        // After fade completes, reset heroBg and hide bg2
+        heroBg.style.backgroundImage = "url('" + nextSrc + "')";
+        heroBg2.style.opacity = '0';
+        heroBg2.style.zIndex = '0';
+        heroBg.style.zIndex = '1';
+      }, 1600);
+      updateCaption();
+      startProgress();
+    });
+  }
+
+  setInterval(advanceSlide, SLIDE_INTERVAL);
 
   // Gallery
   const grid = document.getElementById('galleryGrid');
