@@ -256,7 +256,7 @@
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
       </div>
-      <div class="h-captcha" data-sitekey="fbd6be7e-07e4-41b2-ae52-50769b48a1b2" data-theme="dark"></div>
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
       <button type="submit" class="contact-btn" style="margin-top: 24px;">Send Message</button>
     </form>
   </div>
@@ -536,6 +536,5 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
   })();
 </script>
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </body>
 </html>
