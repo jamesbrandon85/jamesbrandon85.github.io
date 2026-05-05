@@ -74,6 +74,17 @@
   .lets-talk-link:hover { opacity: 0.75; }
   .contact-btn:hover { background: var(--accent); color: var(--dark); }
 
+  /* Fine Art Prints */
+  .prints { background: var(--dark); }
+  .prints-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .prints-text p { font-size: 16px; font-weight: 300; color: rgba(245,245,240,0.65); line-height: 1.85; margin-bottom: 24px; }
+  .prints-features { list-style: none; margin-bottom: 40px; display: flex; flex-direction: column; gap: 12px; }
+  .prints-features li { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 300; color: rgba(245,245,240,0.75); }
+  .prints-features li::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent); flex-shrink: 0; }
+  .prints-cta { display: inline-block; border: 1px solid var(--accent); color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 40px; cursor: pointer; background: none; transition: background 0.2s, color 0.2s; font-family: Inter, sans-serif; text-decoration: none; }
+  .prints-cta:hover { background: var(--accent); color: var(--dark); }
+  .prints-visual img { width: 100%; display: block; }
+
   /* Contact Form */
   .contact-form { width: 100%; text-align: left; margin-top: 8px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -105,14 +116,14 @@
   #lbPrev { left: 16px; }
   #lbNext { right: 16px; }
 
-  /* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ HAMBURGER MENU Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
+  /* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ HAMBURGER MENU ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
   .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 200; }
   .hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ MOBILE STYLES Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
+  /* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ MOBILE STYLES ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
   @media (max-width: 768px) {
     section { padding: 60px 24px; }
     .hero { padding: 0 0 56px 0 !important; height: 100svh; min-height: 500px; }
@@ -139,6 +150,7 @@
     .section-header { padding: 60px 24px 40px; }
     .about { padding: 0; }
     .hero-cta { padding: 10px 18px; font-size: 10px; white-space: nowrap; }
+    .prints-inner { grid-template-columns: 1fr; gap: 40px; }
     .contact-inner { padding: 0 24px; }
     .contact-inner p { font-size: 15px; }
     .contact-btn { padding: 14px 24px; }
@@ -171,6 +183,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#prints">Prints</a></li>
     <li><a href="#workshops">Workshops</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -218,6 +231,28 @@
   </div>
   <div class="gallery-grid" id="galleryGrid"></div>
   <button id="loadMoreBtn">Load More</button>
+</section>
+
+<section class="prints fade-up" id="prints">
+  <div class="prints-inner">
+    <div class="prints-text">
+      <p class="section-label">Fine Art Prints</p>
+      <h2 class="section-title">Your Space, <em>Elevated</em></h2>
+      <div class="section-divider"></div>
+      <p>Each image in my portfolio is available as a museum-quality fine art print — crafted to transform any room into a gallery. Whether for your home or workplace, these limited-edition prints bring the drama of the world's wild places to your walls.</p>
+      <ul class="prints-features">
+        <li>Archival pigment inks on premium fine art paper</li>
+        <li>Aluminium dibond &amp; acrylic face-mount options</li>
+        <li>Custom sizing from 12&Prime; to 60&Prime;+</li>
+        <li>Signed &amp; numbered limited editions</li>
+        <li>White-glove delivery &amp; installation available</li>
+      </ul>
+      <a href="#contact" class="prints-cta">Inquire About Prints</a>
+    </div>
+    <div class="prints-visual">
+      <img src="prints-room.jpg" alt="Fine art landscape print displayed in a modern living room">
+    </div>
+  </div>
 </section>
 
 <section class="workshops fade-up" id="workshops">
@@ -284,7 +319,7 @@
 
 <script>
   var colorCache = {}; // Pre-sample color cache
-  const allPhotos = [{"src":"queens-bath-kauai-james-brandon-copy.jpg","title":"Queen's Bath Sunset","loc":"Kauai, Hawaii"},{"src":"Puu-O-o-lava-james-brandon-copy.jpg","title":"Descending Into PuÊ»u Ê»ÅÊ»Å","loc":"Hawaii Volcanoes"},{"src":"publicmarket.jpg","title":"Pike Place Market","loc":"Seattle, Washington"},{"src":"racetrack-playa-workshop.jpg","title":"Sailing Rock","loc":"Death Valley, California"},{"src":"peles-well-wawaloli-james-brandon-copy.jpg","title":"Pele's Well","loc":"Wawaloli Beach, Hawaii"},{"src":"paso-robles-tree-james-brandon-copy.jpg","title":"Solitary","loc":"Paso Robles, California"},{"src":"ninnekah-supercell-james-brandon-copy-1.jpg","title":"Approaching Storm","loc":"Ninnekah, Oklahoma"},{"src":"mt-lemmon-downpour-james-brandon-copy.jpg","title":"Downpour","loc":"Mt. Lemmon, Arizona"},{"src":"morro-sunset-tight-james-brandon.jpg","title":"Morro Rock Sunset","loc":"Morro Bay, California"},{"src":"mono-lake-tufas-sunrise-james-brandon-copy.jpg","title":"Mono Lake Tufas at Sunrise","loc":"Mono Lake, California"},{"src":"mesquite-photographers-james-brandon.jpg","title":"Sunrise at Mesquite Dunes","loc":"Death Valley, California"},{"src":"mesa-arch-sunrise-james-brandon.jpg","title":"Mesa Arch Sunrise","loc":"Canyonlands NP, Utah"},{"src":"maine-portland-light-sunset-james-brandon-copy.jpg","title":"Portland Head Light Sunset","loc":"Portland, Maine"},{"src":"laupahoehoe-wave-sunrise-james-brandon-copy.jpg","title":"Wave at Sunrise","loc":"Laupahoehoe, Hawaii"},{"src":"latourell-falls-1-james-brandon-copy.jpg","title":"Latourell Falls","loc":"Columbia River Gorge, Oregon"},{"src":"kohala-waterfalls-james-brandon-copy-1.jpg","title":"Kohala Waterfalls","loc":"Big Island, Hawaii"},{"src":"kilauea-night-sky-james-brandon-copy.jpg","title":"Kilauea's Glow","loc":"Volcanoes NP, Hawaii"},{"src":"kee-reach-james-brandon-copy.jpg","title":"Ke'e's Reach","loc":"Kauai, Hawaii"},{"src":"kauai-napali-lava-tube-james-brandon.jpg","title":"Na Pali Coast Lava Tube","loc":"Kauai, Hawaii"},{"src":"kauai-napali-coast-rainbow-james-brandon-copy.jpg","title":"Na Pali Coast Rainbow","loc":"Kauai, Hawaii"},{"src":"james-brandon-Halemaumau-Crater-copy.jpg","title":"Halemaumau Crater","loc":"Hawaii Volcanoes NP"},{"src":"inside-athabasca-james-brandon-copy.jpg","title":"Inside Athabasca Glacier","loc":"Jasper NP, Canada"},{"src":"henrietta-supercell-1-Panorama.jpg","title":"Supercell Near Henrietta","loc":"Henrietta, Texas"},{"src":"hawaii-61g-ocean-entry-james-brandon-copy.jpg","title":"Ocean Entry","loc":"Kalapana, Hawaii"},{"src":"great-sand-dunes-waves.jpg","title":"Great Sand Dunes","loc":"Colorado"},{"src":"great-sand-dunes-sunset-new-james-brandon-copy.jpg","title":"Great Sand Dunes Sunset","loc":"Colorado"},{"src":"grazing-elk-james-brandon.jpg","title":"Bull Elk Grazing","loc":"Rocky Mountain NP, Colorado"},{"src":"grand-canyon-last-light-james-brandon-copy.jpg","title":"Last Light","loc":"Grand Canyon NP"},{"src":"gorton-creek-pano-james-brandon-copy.jpg","title":"Gorton Creek Panorama","loc":"Columbia River Gorge"},{"src":"glacier-point-milky-way-james-brandon-copy-1.jpg","title":"Milky Way at Glacier Point","loc":"Yosemite NP, California"},{"src":"disney-paris-fireworks-copy.jpg","title":"Disneyland Paris Fireworks","loc":"Paris, France"},{"src":"delicate-arch-burst-james-brandon-copy.jpg","title":"Delicate Arch","loc":"Arches NP, Utah"},{"src":"cottonball-basin-pano-james-brandon.jpg","title":"Cottonball Basin Sunset","loc":"Death Valley NP"},{"src":"colorado-aspens-james-brandon.jpg","title":"Colorado Aspens","loc":"Rocky Mountain NP"},{"src":"calif-templeton-milky-way-james-brandon-copy-1.jpg","title":"Milky Way Over Wine Country","loc":"Templeton, California"},{"src":"burg-stahleck-germany-james-brandon-copy.jpg","title":"Burg Stahleck","loc":"Rhine River, Germany"},{"src":"bixby-bridge-james-brandon-copy.jpg","title":"Bixby Bridge","loc":"Big Sur, California"},{"src":"banff-rundle-sunrise-james-brandon-copy-1.jpg","title":"Mt. Rundle Sunrise","loc":"Banff, Canada"},{"src":"banff-bull-elk-battle-james-brandon-copy.jpg","title":"Battle","loc":"Banff NP, Canada"},{"src":"DSC01970-copy.jpg","title":"Storm Chasing","loc":""},{"src":"DSC00204-copy.jpg","title":"Landscape","loc":""}];
+  const allPhotos = [{"src":"queens-bath-kauai-james-brandon-copy.jpg","title":"Queen's Bath Sunset","loc":"Kauai, Hawaii"},{"src":"Puu-O-o-lava-james-brandon-copy.jpg","title":"Descending Into PuÃÂ»u ÃÂ»ÃÂÃÂ»ÃÂ","loc":"Hawaii Volcanoes"},{"src":"publicmarket.jpg","title":"Pike Place Market","loc":"Seattle, Washington"},{"src":"racetrack-playa-workshop.jpg","title":"Sailing Rock","loc":"Death Valley, California"},{"src":"peles-well-wawaloli-james-brandon-copy.jpg","title":"Pele's Well","loc":"Wawaloli Beach, Hawaii"},{"src":"paso-robles-tree-james-brandon-copy.jpg","title":"Solitary","loc":"Paso Robles, California"},{"src":"ninnekah-supercell-james-brandon-copy-1.jpg","title":"Approaching Storm","loc":"Ninnekah, Oklahoma"},{"src":"mt-lemmon-downpour-james-brandon-copy.jpg","title":"Downpour","loc":"Mt. Lemmon, Arizona"},{"src":"morro-sunset-tight-james-brandon.jpg","title":"Morro Rock Sunset","loc":"Morro Bay, California"},{"src":"mono-lake-tufas-sunrise-james-brandon-copy.jpg","title":"Mono Lake Tufas at Sunrise","loc":"Mono Lake, California"},{"src":"mesquite-photographers-james-brandon.jpg","title":"Sunrise at Mesquite Dunes","loc":"Death Valley, California"},{"src":"mesa-arch-sunrise-james-brandon.jpg","title":"Mesa Arch Sunrise","loc":"Canyonlands NP, Utah"},{"src":"maine-portland-light-sunset-james-brandon-copy.jpg","title":"Portland Head Light Sunset","loc":"Portland, Maine"},{"src":"laupahoehoe-wave-sunrise-james-brandon-copy.jpg","title":"Wave at Sunrise","loc":"Laupahoehoe, Hawaii"},{"src":"latourell-falls-1-james-brandon-copy.jpg","title":"Latourell Falls","loc":"Columbia River Gorge, Oregon"},{"src":"kohala-waterfalls-james-brandon-copy-1.jpg","title":"Kohala Waterfalls","loc":"Big Island, Hawaii"},{"src":"kilauea-night-sky-james-brandon-copy.jpg","title":"Kilauea's Glow","loc":"Volcanoes NP, Hawaii"},{"src":"kee-reach-james-brandon-copy.jpg","title":"Ke'e's Reach","loc":"Kauai, Hawaii"},{"src":"kauai-napali-lava-tube-james-brandon.jpg","title":"Na Pali Coast Lava Tube","loc":"Kauai, Hawaii"},{"src":"kauai-napali-coast-rainbow-james-brandon-copy.jpg","title":"Na Pali Coast Rainbow","loc":"Kauai, Hawaii"},{"src":"james-brandon-Halemaumau-Crater-copy.jpg","title":"Halemaumau Crater","loc":"Hawaii Volcanoes NP"},{"src":"inside-athabasca-james-brandon-copy.jpg","title":"Inside Athabasca Glacier","loc":"Jasper NP, Canada"},{"src":"henrietta-supercell-1-Panorama.jpg","title":"Supercell Near Henrietta","loc":"Henrietta, Texas"},{"src":"hawaii-61g-ocean-entry-james-brandon-copy.jpg","title":"Ocean Entry","loc":"Kalapana, Hawaii"},{"src":"great-sand-dunes-waves.jpg","title":"Great Sand Dunes","loc":"Colorado"},{"src":"great-sand-dunes-sunset-new-james-brandon-copy.jpg","title":"Great Sand Dunes Sunset","loc":"Colorado"},{"src":"grazing-elk-james-brandon.jpg","title":"Bull Elk Grazing","loc":"Rocky Mountain NP, Colorado"},{"src":"grand-canyon-last-light-james-brandon-copy.jpg","title":"Last Light","loc":"Grand Canyon NP"},{"src":"gorton-creek-pano-james-brandon-copy.jpg","title":"Gorton Creek Panorama","loc":"Columbia River Gorge"},{"src":"glacier-point-milky-way-james-brandon-copy-1.jpg","title":"Milky Way at Glacier Point","loc":"Yosemite NP, California"},{"src":"disney-paris-fireworks-copy.jpg","title":"Disneyland Paris Fireworks","loc":"Paris, France"},{"src":"delicate-arch-burst-james-brandon-copy.jpg","title":"Delicate Arch","loc":"Arches NP, Utah"},{"src":"cottonball-basin-pano-james-brandon.jpg","title":"Cottonball Basin Sunset","loc":"Death Valley NP"},{"src":"colorado-aspens-james-brandon.jpg","title":"Colorado Aspens","loc":"Rocky Mountain NP"},{"src":"calif-templeton-milky-way-james-brandon-copy-1.jpg","title":"Milky Way Over Wine Country","loc":"Templeton, California"},{"src":"burg-stahleck-germany-james-brandon-copy.jpg","title":"Burg Stahleck","loc":"Rhine River, Germany"},{"src":"bixby-bridge-james-brandon-copy.jpg","title":"Bixby Bridge","loc":"Big Sur, California"},{"src":"banff-rundle-sunrise-james-brandon-copy-1.jpg","title":"Mt. Rundle Sunrise","loc":"Banff, Canada"},{"src":"banff-bull-elk-battle-james-brandon-copy.jpg","title":"Battle","loc":"Banff NP, Canada"},{"src":"DSC01970-copy.jpg","title":"Storm Chasing","loc":""},{"src":"DSC00204-copy.jpg","title":"Landscape","loc":""}];
   // Shuffle allPhotos for randomized hero slideshow order
   (function() { for (var _i = allPhotos.length - 1; _i > 0; _i--) { var _j = Math.floor(Math.random() * (_i + 1)); var _tmp = allPhotos[_i]; allPhotos[_i] = allPhotos[_j]; allPhotos[_j] = _tmp; } })();
   const BASE = 'https://i0.wp.com/jamesb.com/wp-content/uploads/2024/04/';
