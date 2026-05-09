@@ -37,7 +37,7 @@ Light is everything in photography. The same scene can look flat and lifeless at
 
 The best light is typically found in the hour after sunrise and the hour before sunset. The light is warm, directional, and soft. Overcast days can also produce beautiful, even light that works especially well for certain subjects like forests, waterfalls, and street scenes.
 
-![Delicate Arch at Sunset](/blog/5-critical-ingredients-compelling-travel-photos/delicate-arch-burst-james-brandon.webp)
+![Delicate Arch at Sunset](/blog/5-critical-ingredients-compelling-travel-photos/delicate-arch-burst-james-brandon-copy.webp)
 
 Midday light — especially in summer — tends to be harsh, contrasty, and unflattering. If that's your only option, look for shade, or find subjects that work with strong contrast.
 
@@ -47,7 +47,7 @@ One of the most effective techniques for creating depth and immersion in a lands
 
 This could be rocks, flowers, patterns in sand, reflections in a puddle — anything that sits in the bottom portion of your frame and leads the eye toward the background subject.
 
-![Gorton Creek Panorama](/blog/5-critical-ingredients-compelling-travel-photos/gorton-creek-pano-james-brandon.webp)
+![Gorton Creek Panorama](/blog/5-critical-ingredients-compelling-travel-photos/gorton-creek-pano-james-brandon-copy.webp)
 
 Wide-angle lenses are especially good for this technique because they exaggerate the apparent size of nearby objects relative to the background, making the foreground element feel both large and close while the background stretches out behind it.
 
@@ -57,7 +57,7 @@ Great travel photos rarely come straight out of the camera looking their best. A
 
 The key word here is *intent*. Know what feeling or mood you're going for before you start editing. Are you trying to create a warm, nostalgic feeling? A cool, moody atmosphere? A bright and airy look? Let that guide your decisions in Lightroom, Capture One, or whatever tool you use.
 
-![Great Sand Dunes Sunset](/blog/5-critical-ingredients-compelling-travel-photos/great-sand-dunes-sunset-new-james-brandon.webp)
+![Great Sand Dunes Sunset](/blog/5-critical-ingredients-compelling-travel-photos/great-sand-dunes-sunset-new-james-brandon-copy.webp)
 
 Avoid over-processing. Heavily cranked clarity, overly saturated colors, and extreme HDR effects date quickly and distract from the subject. Instead, aim for edits that feel natural but elevated — the best version of what the scene actually looked like.
 
