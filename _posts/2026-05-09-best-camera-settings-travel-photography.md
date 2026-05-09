@@ -9,8 +9,6 @@ image_alt: Antelope Canyon slot canyon warm light, Arizona
 slug: best-camera-settings-travel-photography
 ---
 
-![Antelope Canyon slot canyon warm light, Arizona](/blog/camera-settings-travel-photography/hero-antelope-canyon-james-brandon.webp)
-
 One of the most common questions I get from newer photographers is some version of: *"What settings do you use?"* It's a fair question. When you're traveling, with new locations, unpredictable light, and moments happening fast, having a solid settings foundation lets you focus on composition and timing instead of fumbling through menus.
 
 So let's break it down. These aren't rigid rules, but they are the starting points I come back to again and again on the road.
