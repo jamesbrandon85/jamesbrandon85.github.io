@@ -1,0 +1,44 @@
+# Jekyll Configuration for jamesbrandon85.github.io
+title: "James Brandon Photography"
+description: "Photography tips, travel stories, and behind-the-scenes journal entries from landscape and travel photographer James Brandon."
+url: "https://www.jamesb.com"
+baseurl: ""
+
+author:
+  name: James Brandon
+
+  # Build settings
+  theme: null
+  plugins:
+    - jekyll-sitemap
+      - jekyll-seo-tag
+
+      # Permalink structure for blog posts
+      permalink: /blog/:slug/
+
+      # Collections
+      collections:
+        posts:
+            output: true
+
+            # Defaults
+            defaults:
+              - scope:
+                    path: ""
+                          type: "posts"
+                              values:
+                                    layout: "post"
+                                          author: "James Brandon"
+
+                                          # Exclude from build
+                                          exclude:
+                                            - README.md
+                                              - Gemfile
+                                                - Gemfile.lock
+
+                                                # Google Analytics
+                                                google_analytics: G-41R5SMCXT3
+
+                                                # Sass
+                                                sass:
+                                                  style: compressed
