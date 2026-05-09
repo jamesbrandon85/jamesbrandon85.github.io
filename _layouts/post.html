@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<style>
+.post-hero { margin-top: 0; width: 100%; max-height: 560px; object-fit: cover; display: block; }
+.post-container { max-width: 740px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+.post-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2.5rem; transition: color 0.2s; }
+.post-back:hover { color: var(--accent); }
+.post-back svg { width: 16px; height: 16px; }
+.post-meta { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+.post-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: var(--white); margin-top: 80px; }
+.post-divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
+.post-body { font-size: 1.05rem; line-height: 1.85; color: rgba(245,245,240,0.88); }
+.post-body p { margin-bottom: 1.5rem; }
+.post-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 2.5rem 0 1rem; }
+.post-body blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1.5rem; margin: 2rem 0; font-style: italic; color: rgba(245,245,240,0.7); }
+.post-body img { width: 100%; height: auto; display: block; margin: 2rem 0; }
+.post-body figcaption { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: -1.5rem; margin-bottom: 2rem; letter-spacing: 0.05em; }
+</style>
+
+{% if page.image %}
+<img class="post-hero" src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
+{% endif %}
+
+<article>
+  <div class="post-container">
+    <a class="post-back" href="/blog/">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L3 6l5 5"/></svg>
+      Back to Journal
+    </a>
+
+    <div class="post-meta">{{ page.date | date: "%B %Y" }} &nbsp;&bull;&nbsp; {{ page.category | default: "Photography" }}</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-divider"></div>
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </div>
+</article>
