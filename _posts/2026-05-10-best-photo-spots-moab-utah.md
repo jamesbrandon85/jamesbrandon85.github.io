@@ -4,8 +4,8 @@ title: "The Best Photo Spots in Moab, Utah (A Photographer's Complete Guide)"
 date: 2026-05-10
 category: Travel Photography
 description: Planning a photography trip to Moab, Utah? Discover the best photo spots in Moab including Delicate Arch, Mesa Arch, Corona Arch, and more — with hiking difficulty, best times, and lens recommendations.
-image: /blog/best-photo-spots-moab-utah/hero-delicate-arch-milky-way-pano-james-brandon.webp
-image_alt: Delicate Arch silhouetted against the Milky Way at night, Arches National Park Utah
+image: /blog/best-photo-spots-moab-utah/mesa-arch-sunrise-canyonlands-james-brandon.webp
+image_alt: Mesa Arch at sunrise framing Canyonlands National Park, Utah
 slug: best-photo-spots-moab-utah
 ---
 
@@ -23,7 +23,7 @@ Moab sits at the center of two completely different photographic worlds. To the 
 
 ## 1. Delicate Arch
 
-![Delicate Arch silhouetted against the Milky Way, Arches National Park](/blog/best-photo-spots-moab-utah/delicate-arch-milky-way-james-brandon.webp)
+![Delicate Arch silhouetted against the Milky Way, Arches National Park](/blog/5-critical-ingredients-compelling-travel-photos/delicate-arch-burst-james-brandon-copy.webp)
 
 There's no more iconic image in Moab — and few more iconic in all of landscape photography. Delicate Arch is the crown jewel of Arches National Park and a legitimate bucket list location for photographers worldwide.
 
