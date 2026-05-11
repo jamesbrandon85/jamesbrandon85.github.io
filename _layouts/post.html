@@ -2,173 +2,144 @@
 layout: default
 ---
 <style>
-  .post-hero-wrap { position: relative; width: 100%; max-height: 560px; overflow: hidden; margin-top: 0; display: flex; align-items: flex-end; }
-  .post-hero { width: 100%; max-height: 560px; object-fit: cover; display: block; }
-  .post-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.88) 100%); }
-  .post-hero-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem max(20px, 5vw) 2.5rem; max-width: 860px; }
-  .post-hero-meta { font-size: 0.7rem; color: rgba(255,255,255,0.65); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
-  .post-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.15; color: var(--white); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
-  .post-container { max-width: 740px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-  .post-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2.5rem; transition: color 0.2s; }
-  .post-back:hover { color: var(--accent); }
-  .post-back svg { width: 16px; height: 16px; }
-  .post-divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
-  .post-body { font-size: 1.05rem; line-height: 1.85; color: rgba(245,245,240,0.88); }
-  .post-body p { margin-bottom: 1.5rem; }
-  .post-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 2.5rem 0 1rem; }
-  .post-body blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1.5rem; margin: 2rem 0; font-style: italic; color: rgba(245,245,240,0.7); }
-  .post-body figcaption { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: -1.5rem; margin-bottom: 2rem; letter-spacing: 0.05em; }
+.post-hero-wrap { position: relative; width: 100%; max-height: 560px; overflow: hidden; margin-top: 0; display: flex; align-items: flex-end; }
+.post-hero { width: 100%; max-height: 560px; object-fit: cover; display: block; }
+.post-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.88) 100%); }
+.post-hero-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem max(20px, 5vw) 2.5rem; max-width: 860px; }
+.post-hero-meta { font-size: 0.7rem; color: rgba(255,255,255,0.65); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.post-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.15; color: var(--white); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+.post-container { max-width: 740px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+.post-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2.5rem; transition: color 0.2s; }
+.post-back:hover { color: var(--accent); }
+.post-back svg { width: 16px; height: 16px; }
+.post-divider { width: 48px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
+.post-body { font-size: 1.05rem; line-height: 1.85; color: rgba(245,245,240,0.88); }
+.post-body p { margin-bottom: 1.5rem; }
+.post-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 2.5rem 0 1rem; }
+.post-body blockquote { border-left: 3px solid var(--accent); padding: 0.75rem 1.5rem; margin: 2rem 0; font-style: italic; color: rgba(245,245,240,0.7); }
+.post-body figcaption { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: -1.5rem; margin-bottom: 2rem; letter-spacing: 0.05em; }
 
-  /* ——— Post image hover zoom ——— */
-  .post-img-wrap { position: relative; overflow: hidden; margin: 2rem 0; cursor: zoom-in; display: block; }
-  .post-img-wrap img { width: 100%; height: auto; display: block; margin: 0; transition: transform 0.5s ease; filter: brightness(0.92); }
-  .post-img-wrap:hover img { transform: scale(1.04); filter: brightness(1); }
-  .post-img-wrap .post-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%); opacity: 0; transition: opacity 0.35s; display: flex; align-items: flex-end; padding: 16px 18px 20px; pointer-events: none; }
-  .post-img-wrap:hover .post-img-overlay { opacity: 1; }
-  .post-img-wrap .post-img-caption { color: #fff; font-size: 12px; line-height: 1.4; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; }
+/* Post image hover zoom */
+.post-img-wrap { position: relative; overflow: hidden; margin: 2rem 0; cursor: zoom-in; display: block; }
+.post-img-wrap img { width: 100%; height: auto; display: block; margin: 0; transition: transform 0.5s ease; filter: brightness(0.92); }
+.post-img-wrap:hover img { transform: scale(1.04); filter: brightness(1); }
+.post-img-wrap .post-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%); opacity: 0; transition: opacity 0.35s; display: flex; align-items: flex-end; padding: 16px 18px 20px; pointer-events: none; }
+.post-img-wrap:hover .post-img-overlay { opacity: 1; }
+.post-img-wrap .post-img-caption { color: #fff; font-size: 12px; line-height: 1.4; font-family: 'Inter', sans-serif; letter-spacing: 0.04em; }
 
-  /* ——— Blog post lightbox ——— */
-  .post-lightbox { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
-  .post-lightbox.active { opacity: 1; pointer-events: all; }
-  .post-lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
-  .post-lightbox-close { position: absolute; top: 24px; right: 32px; color: rgba(255,255,255,0.6); font-size: 30px; cursor: pointer; background: none; border: none; transition: color 0.2s; line-height: 1; padding: 0; }
-  .post-lightbox-close:hover { color: #fff; }
-  .post-lightbox-caption { position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); text-align: center; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); padding: 10px 24px 14px; white-space: nowrap; max-width: 90vw; white-space: normal; text-align: center; }
-  .post-lightbox-caption-title { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; }
-  .post-lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(255,255,255,0.5); font-size: 40px; cursor: pointer; padding: 20px; transition: color 0.2s; z-index: 10; line-height: 1; user-select: none; }
-  .post-lb-nav:hover { color: #fff; }
-  #postLbPrev { left: 16px; }
-  #postLbNext { right: 16px; }
-  </style>
+/* Blog post lightbox */
+.post-lightbox { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.post-lightbox.active { opacity: 1; pointer-events: all; }
+.post-lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+.post-lightbox-close { position: absolute; top: 24px; right: 32px; color: rgba(255,255,255,0.6); font-size: 30px; cursor: pointer; background: none; border: none; transition: color 0.2s; line-height: 1; padding: 0; }
+.post-lightbox-close:hover { color: #fff; }
+.post-lightbox-caption { position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); text-align: center; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px); padding: 10px 24px 14px; max-width: 90vw; white-space: normal; }
+.post-lightbox-caption-title { font-family: 'Playfair Display', serif; font-size: 16px; color: #fff; }
+.post-lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: rgba(255,255,255,0.5); font-size: 40px; cursor: pointer; padding: 20px; transition: color 0.2s; z-index: 10; line-height: 1; user-select: none; }
+.post-lb-nav:hover { color: #fff; }
+#postLbPrev { left: 16px; }
+#postLbNext { right: 16px; }
+</style>
 
 {% if page.image %}
 <div class="post-hero-wrap">
-    <img class="post-hero" src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
-    <div class="post-hero-overlay"></div>div>
-    <div class="post-hero-text">
-          <div class="post-hero-meta">{{ page.date | date: "%B %Y" }} &nbsp;&bull;&nbsp; {{ page.category | default: "Photography" }}</div>div>
-          <h1 class="post-hero-title">{{ page.title }}</h1>h1>
-    </div>div>
-</div>div>
+  <img class="post-hero" src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
+  <div class="post-hero-overlay"></div>
+  <div class="post-hero-text">
+    <div class="post-hero-meta">{{ page.date | date: "%B %Y" }} &nbsp;&bull;&nbsp; {{ page.category | default: "Photography" }}</div>
+    <h1 class="post-hero-title">{{ page.title }}</h1>
+  </div>
+</div>
 {% endif %}
 
 <article>
-    <div class="post-container">
-          <a class="post-back" href="/blog/">
-                  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L3 6l5 5"/></svg>svg>
-                  Back to Journal
-          </a>a>
+  <div class="post-container">
+    <a class="post-back" href="/blog/">
+      <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L3 6l5 5"/></svg>
+      Back to Journal
+    </a>
 
-          <div class="post-divider"></div>div>
+    <div class="post-divider"></div>
 
-          <div class="post-body">
-                  {{ content }}
-          </div>div>
-    </div>div>
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </div>
 </article>
 
-<!-- Blog post lightbox -->
 <div class="post-lightbox" id="postLightbox">
-    <button class="post-lightbox-close" id="postLbClose">&times;</button>button>
-    <img id="postLbImg" src="" alt="">
-    <div class="post-lightbox-caption">
-          <div class="post-lightbox-caption-title" id="postLbCaption"></div>div>
-    </div>div>
-    <button class="post-lb-nav" id="postLbPrev">&#8249;</button>button>
-    <button class="post-lb-nav" id="postLbNext">&#8250;</button>button>
-</div>div>
+  <button class="post-lightbox-close" id="postLbClose">&times;</button>
+  <img id="postLbImg" src="" alt="">
+  <div class="post-lightbox-caption">
+    <div class="post-lightbox-caption-title" id="postLbCaption"></div>
+  </div>
+  <button class="post-lb-nav" id="postLbPrev">&#8249;</button>
+  <button class="post-lb-nav" id="postLbNext">&#8250;</button>
+</div>
 
 <script>
-  (function() {
-      // Wrap all post body images in a zoom container
-      var postBody = document.querySelector('.post-body');
-      if (!postBody) return;
-
-      var imgs = postBody.querySelectorAll('img');
-      var postImgs = [];
-
-      imgs.forEach(function(img) {
-            // Skip if already wrapped
-            if (img.parentNode.classList.contains('post-img-wrap')) return;
-
-            var wrap = document.createElement('div');
-            wrap.className = 'post-img-wrap';
-
-            var overlay = document.createElement('div');
-            overlay.className = 'post-img-overlay';
-
-            var captionEl = document.createElement('span');
-            captionEl.className = 'post-img-caption';
-            var altText = img.getAttribute('alt') || '';
-            captionEl.textContent = altText;
-            overlay.appendChild(captionEl);
-
-            // Insert wrap before img, then move img inside
-            img.parentNode.insertBefore(wrap, img);
-            wrap.appendChild(img);
-            wrap.appendChild(overlay);
-
-            // If there is a figcaption sibling, move it inside the wrap too
-            var next = wrap.nextSibling;
-            if (next && next.tagName === 'FIGCAPTION') {
-                    wrap.appendChild(next);
-            }
-
-            var idx = postImgs.length;
-            postImgs.push({ src: img.src, alt: altText });
-            wrap.addEventListener('click', function() { openPostLb(idx); });
-      });
-
-      // Lightbox logic
-      var lb = document.getElementById('postLightbox');
-      var lbImg = document.getElementById('postLbImg');
-      var lbCaption = document.getElementById('postLbCaption');
-      var lbClose = document.getElementById('postLbClose');
-      var lbPrev = document.getElementById('postLbPrev');
-      var lbNext = document.getElementById('postLbNext');
-      var currentIdx = 0;
-
-      function openPostLb(idx) {
-            currentIdx = (idx + postImgs.length) % postImgs.length;
-            lbImg.src = postImgs[currentIdx].src;
-            lbImg.alt = postImgs[currentIdx].alt;
-            lbCaption.textContent = postImgs[currentIdx].alt;
-            lb.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            // Hide nav if only one image
-            lbPrev.style.display = postImgs.length > 1 ? '' : 'none';
-            lbNext.style.display = postImgs.length > 1 ? '' : 'none';
-      }
-
-      function closePostLb() {
-            lb.classList.remove('active');
-            document.body.style.overflow = '';
-      }
-
-      lbClose.addEventListener('click', closePostLb);
-      lbPrev.addEventListener('click', function(e) { e.stopPropagation(); openPostLb(currentIdx - 1); });
-      lbNext.addEventListener('click', function(e) { e.stopPropagation(); openPostLb(currentIdx + 1); });
-
-      lb.addEventListener('click', function(e) {
-            if (e.target === lb) closePostLb();
-      });
-
-      document.addEventListener('keydown', function(e) {
-            if (!lb.classList.contains('active')) return;
-            if (e.key === 'ArrowRight') openPostLb(currentIdx + 1);
-            if (e.key === 'ArrowLeft') openPostLb(currentIdx - 1);
-            if (e.key === 'Escape') closePostLb();
-      });
-
-      // Touch swipe support
-      var touchStartX = 0;
-      lb.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].clientX;
-      }, { passive: true });
-      lb.addEventListener('touchend', function(e) {
-            if (!lb.classList.contains('active')) return;
-            var dx = e.changedTouches[0].clientX - touchStartX;
-            if (Math.abs(dx) > 40) openPostLb(currentIdx + (dx < 0 ? 1 : -1));
-      }, { passive: true });
-  })();
+(function() {
+  var postBody = document.querySelector('.post-body');
+  if (!postBody) return;
+  var imgs = postBody.querySelectorAll('img');
+  var postImgs = [];
+  imgs.forEach(function(img) {
+    if (img.parentNode.classList.contains('post-img-wrap')) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'post-img-wrap';
+    var overlay = document.createElement('div');
+    overlay.className = 'post-img-overlay';
+    var captionEl = document.createElement('span');
+    captionEl.className = 'post-img-caption';
+    var altText = img.getAttribute('alt') || '';
+    captionEl.textContent = altText;
+    overlay.appendChild(captionEl);
+    img.parentNode.insertBefore(wrap, img);
+    wrap.appendChild(img);
+    wrap.appendChild(overlay);
+    var next = wrap.nextSibling;
+    if (next && next.tagName === 'FIGCAPTION') { wrap.appendChild(next); }
+    var idx = postImgs.length;
+    postImgs.push({ src: img.src, alt: altText });
+    wrap.addEventListener('click', function() { openPostLb(idx); });
+  });
+  var lb = document.getElementById('postLightbox');
+  var lbImg = document.getElementById('postLbImg');
+  var lbCaption = document.getElementById('postLbCaption');
+  var lbClose = document.getElementById('postLbClose');
+  var lbPrev = document.getElementById('postLbPrev');
+  var lbNext = document.getElementById('postLbNext');
+  var currentIdx = 0;
+  function openPostLb(idx) {
+    currentIdx = (idx + postImgs.length) % postImgs.length;
+    lbImg.src = postImgs[currentIdx].src;
+    lbImg.alt = postImgs[currentIdx].alt;
+    lbCaption.textContent = postImgs[currentIdx].alt;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    lbPrev.style.display = postImgs.length > 1 ? '' : 'none';
+    lbNext.style.display = postImgs.length > 1 ? '' : 'none';
+  }
+  function closePostLb() {
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  lbClose.addEventListener('click', closePostLb);
+  lbPrev.addEventListener('click', function(e) { e.stopPropagation(); openPostLb(currentIdx - 1); });
+  lbNext.addEventListener('click', function(e) { e.stopPropagation(); openPostLb(currentIdx + 1); });
+  lb.addEventListener('click', function(e) { if (e.target === lb) closePostLb(); });
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'ArrowRight') openPostLb(currentIdx + 1);
+    if (e.key === 'ArrowLeft') openPostLb(currentIdx - 1);
+    if (e.key === 'Escape') closePostLb();
+  });
+  var touchStartX = 0;
+  lb.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function(e) {
+    if (!lb.classList.contains('active')) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) openPostLb(currentIdx + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
 </script>
