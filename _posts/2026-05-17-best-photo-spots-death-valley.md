@@ -26,6 +26,7 @@ The best months to visit are November through March. Winter brings the highest c
 **Where to stay:** I strongly recommend staying inside the park. Yes, you can save money at a motel in Beatty, Nevada, but you'll add an hour of driving each way, and in Death Valley that time cost is enormous — especially when you're trying to hit sunrise light. Inside the park, your two main options are Furnace Creek and Stovepipe Wells. The Inn at Death Valley is a beautiful historic property, but it runs $400–600+ per night. The Ranch at Death Valley is the budget-friendly alternative at the same location, typically $150–250/night. Stovepipe Wells Village Hotel is my personal preference — the rooms are comfortable, the bar and restaurant are surprisingly good, the staff is excellent, and it puts you steps from the Mesquite Flat Sand Dunes.
 
 ## 1. Mesquite Flat Sand Dunes
+![Mesquite Flat Sand Dunes at sunrise with rippled sand, Death Valley National Park](/blog/best-photo-spots-death-valley/mesquite-flat-dunes-sunrise-death-valley-james-brandon.webp)
 
 The Mesquite Flat Sand Dunes near Stovepipe Wells are the most accessible dunes in the park and, photographically, among the most rewarding desert locations I've ever shot. The interplay of light and shadow across the curved ridgelines during golden hour is extraordinary — and it changes by the minute.
 
@@ -39,6 +40,7 @@ Sunset is equally beautiful and offers a slightly different advantage: you can s
 - **Lens:** Any focal length works; telephoto compresses the dune ridges beautifully
 
 ## 2. Badwater Basin
+![Salt polygon patterns at Badwater Basin at sunset, Death Valley National Park](/blog/best-photo-spots-death-valley/badwater-basin-patterns-death-valley-james-brandon.webp)
 
 Badwater Basin is the beating heart of Death Valley photography for me. I've been there more times than I can count and I have never come away without something worth keeping. The challenge — and the reward — is that the patterns are always different. Scouting is not optional here. It's essential.
 
@@ -54,6 +56,7 @@ Bring a wide-angle lens and get low — as low as you can physically get. A ball
 - **Lens:** Wide angle — get as low to the ground as possible
 
 ## 3. Zabriskie Point
+![Zabriskie Point badlands at sunrise with golden light, Death Valley National Park](/blog/best-photo-spots-death-valley/zabriskie-point-sunrise-death-valley-james-brandon.webp)
 
 If you photograph only one overlook in Death Valley, make it Zabriskie Point. I'm generally skeptical of pull-off overlooks — they tend to produce identical images that feel passive. Zabriskie Point is the exception. The eroded badlands below, carved from ancient lake deposits into ridges and gullies of gold, tan, and rust, are genuinely extraordinary. Under the right light they look like the surface of another planet.
 
@@ -67,6 +70,7 @@ One move worth making: don't just shoot from the main overlook. Walk the ridge i
 - **Lens:** Any; wide angle to telephoto all produce compelling results
 
 ## 4. West Side Road
+![Salt tributary patterns on West Side Road at golden hour, Death Valley National Park](/blog/best-photo-spots-death-valley/west-side-road-salt-death-valley-james-brandon.webp)
 
 When the salt patterns at the main Badwater Basin parking area aren't cooperating, West Side Road is your Plan B — and it almost always delivers. West Side Road is a graded dirt road that runs along the west side of the basin between Badwater and Furnace Creek. About a mile after you turn onto it from Badwater Road, you'll find a series of salt-encrusted tributaries on the left side of the road. Pull over and walk up to them.
 
@@ -78,6 +82,7 @@ These tributaries run across dark, coffee-brown desert floor, which creates a st
 - **Lens:** Wide angle — get down low
 
 ## 5. Artist's Palette
+![Artist's Palette colorful hillside at twilight, Death Valley National Park](/blog/best-photo-spots-death-valley/artists-palette-twilight-death-valley-james-brandon.webp)
 
 Artist's Drive is a one-way scenic road off Badwater Road near Furnace Creek, and its main destination — Artist's Palette — is one of the most visually distinctive spots in the park. The face of the Black Mountains here is streaked with an improbable range of colors: greens, purples, pinks, yellows, and reds, all caused by the oxidation of different minerals in the volcanic rock.
 
@@ -89,6 +94,7 @@ During the middle of the day the colors look muted and flat. At golden hour, and
 - **Lens:** Any
 
 ## 6. Dante's View
+![Dante's View overlook at sunrise above Badwater Basin, Death Valley National Park](/blog/best-photo-spots-death-valley/dantes-view-sunrise-death-valley-james-brandon.webp)
 
 For a sense of Death Valley's true scale, nothing competes with Dante's View. This overlook sits atop the Black Mountains at over 5,000 feet above sea level — which means it's actually above sea level while looking straight down at Badwater Basin, 282 feet below. On a clear day you can see the Sierra Nevada to the west. The visual distance between the highest peak in the contiguous United States (Mount Whitney, just across the Owens Valley) and the lowest point in North America (Badwater) is visible from a single vantage point.
 
@@ -100,6 +106,7 @@ Photographers most often shoot here at sunrise, when the light comes from behind
 - **Lens:** Any; telephoto for compression of the basin and mountains
 
 ## 7. Racetrack Playa
+![Sailing stones with long tracks on Racetrack Playa, Death Valley National Park](/blog/best-photo-spots-death-valley/racetrack-playa-sailing-stones-death-valley-james-brandon.webp)
 
 No location in Death Valley carries more mystique than Racetrack Playa — a remote, nearly perfectly flat dry lake bed at 3,700 feet elevation, famous for the "sailing stones" that leave tracks across the playa surface. For decades the mechanism was debated. We now know it involves a thin layer of ice forming overnight, which allows wind to push rocks — some weighing hundreds of pounds — slowly across the near-frictionless wet clay. I've stood next to a rock with a 200-foot trail behind it, and it's one of the more surreal things I've experienced as a photographer.
 
@@ -113,6 +120,7 @@ I'll also say this plainly: the playa has been mistreated by visitors. People mo
 - **Lens:** Wide angle
 
 ## 8. Rhyolite Ghost Town
+![Rhyolite ghost town ruins at night under Milky Way, Nevada](/blog/best-photo-spots-death-valley/rhyolite-ghost-town-night-death-valley-james-brandon.webp)
 
 Technically just outside the park boundary near Beatty, Nevada, Rhyolite deserves a spot on any Death Valley photography itinerary. This former gold rush boomtown peaked at around 10,000 residents in the early 1900s, collapsed almost as fast as it rose, and was essentially abandoned by 1920. What remains are the skeletal ruins of banks, homes, and commercial buildings — plus a collection of genuinely strange outdoor art installations on the edge of town, including a life-size sculpture garden that is deeply eerie at night.
 
