@@ -4,8 +4,8 @@ title: "The Best Photo Spots in Death Valley (A Photographer's Complete Guide)"
 date: 2026-05-17
 category: Travel Photography
 description: Planning a photography trip to Death Valley National Park? Discover the best photo spots in Death Valley — Mesquite Flat Sand Dunes, Badwater Basin, Zabriskie Point, and more — with hiking tips, best times, and lens recommendations.
-image: /blog/best-photo-spots-death-valley/badwater-basin-patterns-death-valley-james-brandon.webp
-image_alt: Salt polygon patterns at Badwater Basin, Death Valley National Park
+image: /blog/best-photo-spots-death-valley/death-valley-west-side-pano-james-brandon.webp
+image_alt: Panoramic view of Death Valley National Park from the west side
 slug: best-photo-spots-death-valley
 ---
 
@@ -93,17 +93,20 @@ During the middle of the day the colors look muted and flat. At golden hour, and
 - **Best time of day:** Twilight (before sunrise or after sunset)
 - **Lens:** Any
 
-## 6. Dante's View
-![Dante's View overlook at sunrise above Badwater Basin, Death Valley National Park](/blog/best-photo-spots-death-valley/dantes-view-sunrise-death-valley-james-brandon.webp)
+## 6. Cottonball Basin
 
-For a sense of Death Valley's true scale, nothing competes with Dante's View. This overlook sits atop the Black Mountains at over 5,000 feet above sea level — which means it's actually above sea level while looking straight down at Badwater Basin, 282 feet below. On a clear day you can see the Sierra Nevada to the west. The visual distance between the highest peak in the contiguous United States (Mount Whitney, just across the Owens Valley) and the lowest point in North America (Badwater) is visible from a single vantage point.
+![Cottonball Basin salt flats panorama, Death Valley National Park](/blog/best-photo-spots-death-valley/cottonball-basin-pano-james-brandon.webp)
 
-Photographers most often shoot here at sunrise, when the light comes from behind you and illuminates the basin floor. But I've found Dante's View compelling at any time of day — the topography is so dramatic that even flat midday light can produce strong images. It's also a great spot for Milky Way photography in summer months, when the galaxy rises over the valley.
+Cottonball Basin sits in the northern end of the Badwater Basin salt flat system and is one of the most underrated photography locations in all of Death Valley. Most visitors head straight to the main Badwater parking area and never make it up here, which means Cottonball Basin offers something increasingly rare in Death Valley — solitude. On the mornings I've shot here, I've had the entire basin to myself.
 
-- **Hiking difficulty:** Easy (paved road to the parking area, short walk to overlook)
-- **Best time of year:** Year-round
-- **Best time of day:** Sunrise or night
-- **Lens:** Any; telephoto for compression of the basin and mountains
+The salt formations at Cottonball Basin tend to be rougher and more crystalline than the polished polygons at Badwater, which gives the landscape a completely different character. The white crystals pile up into uneven, almost foam-like mounds that catch sidelight beautifully at sunrise. The basin also has a slightly different color palette depending on conditions — when moisture is present, the salt takes on a blue-gray tint that contrasts dramatically with the warm desert sky.
+
+To reach it, drive north from the main Badwater turnoff along Badwater Road. The basin is on the left side of the road. There's no formal parking area, so pull off where it's safe and walk in.
+
+- **Hiking difficulty:** Easy
+- **Best time of year:** Year-round; winter and early spring offer the most dramatic conditions
+- **Best time of day:** Sunrise
+- **Lens:** Wide angle — get down low to emphasize the texture of the salt crystals
 
 ## 7. Racetrack Playa
 ![Sailing stones with long tracks on Racetrack Playa, Death Valley National Park](/blog/best-photo-spots-death-valley/racetrack-playa-sailing-stones-death-valley-james-brandon.webp)
