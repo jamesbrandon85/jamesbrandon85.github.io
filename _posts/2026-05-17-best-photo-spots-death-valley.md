@@ -34,10 +34,12 @@ The biggest challenge here isn't finding the dunes, it's finding pristine sand. 
 
 Sunset is equally beautiful and offers a slightly different advantage: you can see the light in all directions, including back toward the Panamint Mountains. If you stay into blue hour and beyond, bring a GPS — the dunes all look identical in the dark and it's genuinely easy to get disoriented.
 
-🥾 **Hiking difficulty:** Easy to strenuous (depending on how far in you walk)
-📅 **Best time of year:** Year-round
-🌅 **Best time of day:** Sunrise or sunset
-📷 **Lens:** Any focal length works; telephoto compresses the dune ridges beautifully
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy to strenuous (depending on how far in you walk)</li>
+<li>📅 <strong>Best time of year:</strong> Year-round</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise or sunset</li>
+<li>📷 <strong>Lens:</strong> Any focal length works; telephoto compresses the dune ridges beautifully</li>
+</ul>
 
 ## 2. Badwater Basin
 ![Salt polygon patterns at Badwater Basin at sunset, Death Valley National Park](/blog/best-photo-spots-death-valley/badwater-basin-patterns-death-valley-james-brandon.webp)
@@ -50,10 +52,12 @@ After heavy winter rain, standing water can completely cover the basin floor and
 
 Bring a wide-angle lens and get low — as low as you can physically get. A ball head that allows near-ground-level positioning is extremely useful here.
 
-🥾 **Hiking difficulty:** Easy to strenuous (depending on how far out you walk)
-📅 **Best time of year:** Year-round; winter rain events create exceptional conditions
-🌅 **Best time of day:** Sunrise or sunset
-📷 **Lens:** Wide angle — get as low to the ground as possible
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy to strenuous (depending on how far out you walk)</li>
+<li>📅 <strong>Best time of year:</strong> Year-round; winter rain events create exceptional conditions</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise or sunset</li>
+<li>📷 <strong>Lens:</strong> Wide angle — get as low to the ground as possible</li>
+</ul>
 
 ## 3. Zabriskie Point
 ![Zabriskie Point badlands at sunrise with golden light, Death Valley National Park](/blog/best-photo-spots-death-valley/zabriskie-point-sunrise-death-valley-james-brandon.webp)
@@ -64,10 +68,12 @@ The viewpoint is easy to reach — there's a parking lot and a short, well-maint
 
 One move worth making: don't just shoot from the main overlook. Walk the ridge in both directions to find slightly different angles and foreground elements. And if you have time, hike down into the badlands themselves during the middle of the day (when the light isn't great for photography anyway) to understand the terrain so you can make smarter compositional decisions at sunrise.
 
-🥾 **Hiking difficulty:** Easy (main overlook); moderate if you hike into the badlands
-📅 **Best time of year:** Year-round
-🌅 **Best time of day:** Sunrise
-📷 **Lens:** Any; wide angle to telephoto all produce compelling results
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy (main overlook); moderate if you hike into the badlands</li>
+<li>📅 <strong>Best time of year:</strong> Year-round</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise</li>
+<li>📷 <strong>Lens:</strong> Any; wide angle to telephoto all produce compelling results</li>
+</ul>
 
 ## 4. West Side Road
 ![Salt tributary patterns on West Side Road at golden hour, Death Valley National Park](/blog/best-photo-spots-death-valley/west-side-road-salt-death-valley-james-brandon.webp)
@@ -76,10 +82,12 @@ When the salt patterns at the main Badwater Basin parking area aren't cooperatin
 
 These tributaries run across dark, coffee-brown desert floor, which creates a stunning contrast with the bright white salt crystals. The patterns here tend to be more intimate and detailed than the main basin, and because fewer people know about them, you're far more likely to have the place to yourself. A wide-angle lens down at ground level is the move here, same as at Badwater — the geometry and texture of the salt edges are what you're after.
 
-🥾 **Hiking difficulty:** Easy
-📅 **Best time of year:** Year-round
-🌅 **Best time of day:** Sunrise or sunset
-📷 **Lens:** Wide angle — get down low
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy</li>
+<li>📅 <strong>Best time of year:</strong> Year-round</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise or sunset</li>
+<li>📷 <strong>Lens:</strong> Wide angle — get down low</li>
+</ul>
 
 ## 5. Artist's Palette
 ![Artist's Palette colorful hillside at twilight, Death Valley National Park](/blog/best-photo-spots-death-valley/artists-palette-twilight-death-valley-james-brandon.webp)
@@ -88,10 +96,12 @@ Artist's Drive is a one-way scenic road off Badwater Road near Furnace Creek, an
 
 During the middle of the day the colors look muted and flat. At golden hour, and especially in the minutes after sunset during twilight, they come alive. The pinks and purples in the sky seem to amplify the colors in the rock, and the whole hillside glows in a way that looks almost surreal in photographs. Shoot from the parking area overlook but also explore on foot — you can walk into the canyon and find compositions that no one shooting from the road will get.
 
-🥾 **Hiking difficulty:** Easy
-📅 **Best time of year:** Year-round
-🌅 **Best time of day:** Twilight (before sunrise or after sunset)
-📷 **Lens:** Any
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy</li>
+<li>📅 <strong>Best time of year:</strong> Year-round</li>
+<li>🌅 <strong>Best time of day:</strong> Twilight (before sunrise or after sunset)</li>
+<li>📷 <strong>Lens:</strong> Any</li>
+</ul>
 
 ## 6. Cottonball Basin
 
@@ -103,10 +113,12 @@ The salt formations at Cottonball Basin tend to be rougher and more crystalline 
 
 To reach it, drive north from the main Badwater turnoff along Badwater Road. The basin is on the left side of the road. There's no formal parking area, so pull off where it's safe and walk in.
 
-🥾 **Hiking difficulty:** Easy
-📅 **Best time of year:** Year-round; winter and early spring offer the most dramatic conditions
-🌅 **Best time of day:** Sunrise
-📷 **Lens:** Wide angle — get down low to emphasize the texture of the salt crystals
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy</li>
+<li>📅 <strong>Best time of year:</strong> Year-round; winter and early spring offer the most dramatic conditions</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise</li>
+<li>📷 <strong>Lens:</strong> Wide angle — get down low to emphasize the texture of the salt crystals</li>
+</ul>
 
 ## 7. Racetrack Playa
 ![Sailing stones with long tracks on Racetrack Playa, Death Valley National Park](/blog/best-photo-spots-death-valley/racetrack-playa-sailing-stones-death-valley-james-brandon.webp)
@@ -117,10 +129,12 @@ Getting there is an adventure in itself, and I want to be honest about what's in
 
 I'll also say this plainly: the playa has been mistreated by visitors. People move stones, stand on them for selfies, chip up the surrounding clay, and take rocks as souvenirs. If you make this trip — and it's worth making — please leave every single thing exactly as you found it.
 
-🥾 **Hiking difficulty:** Easy to moderate (flat playa, significant walking involved)
-📅 **Best time of year:** Year-round; avoid if rain is forecast (wet playa is closed to foot traffic)
-🌅 **Best time of day:** Sunrise or sunset; excellent for night photography
-📷 **Lens:** Wide angle
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy to moderate (flat playa, significant walking involved)</li>
+<li>📅 <strong>Best time of year:</strong> Year-round; avoid if rain is forecast (wet playa is closed to foot traffic)</li>
+<li>🌅 <strong>Best time of day:</strong> Sunrise or sunset; excellent for night photography</li>
+<li>📷 <strong>Lens:</strong> Wide angle</li>
+</ul>
 
 ## 8. Rhyolite Ghost Town
 ![Rhyolite ghost town ruins at night under Milky Way, Nevada](/blog/best-photo-spots-death-valley/rhyolite-ghost-town-night-death-valley-james-brandon.webp)
@@ -129,10 +143,12 @@ Technically just outside the park boundary near Beatty, Nevada, Rhyolite deserve
 
 Scout during the day to plan your compositions, then come back at sunset or after dark. The ruins photograph well under the Milky Way, and the combination of crumbling architecture and desert sky is unlike anything else in the region.
 
-🥾 **Hiking difficulty:** Easy
-📅 **Best time of year:** Year-round
-🌅 **Best time of day:** Sunset and night
-📷 **Lens:** Any; wide angle for the Milky Way
+<ul style="list-style:none;padding-left:0">
+<li>🥾 <strong>Hiking difficulty:</strong> Easy</li>
+<li>📅 <strong>Best time of year:</strong> Year-round</li>
+<li>🌅 <strong>Best time of day:</strong> Sunset and night</li>
+<li>📷 <strong>Lens:</strong> Any; wide angle for the Milky Way</li>
+</ul>
 
 ## Final Thoughts
 
